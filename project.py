@@ -1,3 +1,8 @@
+print("\t---------Initialize hyperparameters---------\n")
+steps = int(input("Enter steps_per_epoch: "))
+no_of_epoch = int(input("Enter no_of_epoch: "))
+    
+
 # Import important libraries
 
 from keras.layers import Convolution2D
@@ -73,8 +78,8 @@ test_set = test_datagen.flow_from_directory(
         class_mode='binary')
 model.fit(
         training_set,
-        steps_per_epoch=150,
-        epochs=5,
+        steps_per_epoch=steps,
+        epochs=no_of_epoch,
         validation_data=test_set,
         validation_steps=800)
 
